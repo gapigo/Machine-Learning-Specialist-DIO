@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .cube {
+        width: 100px;
+        height: 100px;
+        perspective: 1000px;
+      }
+      .cube div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        box-sizing: border-box;
+      }
+      .cube .face1 {
+        transform: rotateX(0deg) translateZ(50px);
+        background: red;
+      }
+      .cube .face2 {
+        transform: rotateX(90deg) translateZ(50px);
+        background: green;
+      }
+      .cube .face3 {
+        transform: rotateY(90deg) translateZ(50px);
+        background: blue;
+      }
+      .cube .face4 {
+        transform: rotateY(180deg) translateZ(50px);
+        background: yellow;
+      }
+      .cube .face5 {
+        transform: rotateY(-90deg) translateZ(50px);
+        background: purple;
+      }
+      .cube .face6 {
+        transform: rotateX(-90deg) translateZ(50px);
+        background: orange;
+      }
+    </style>
+
+    <div class="cube">
+      <div class="face1"></div>
+      <div class="face2"></div>
+      <div class="face3"></div>
+      <div class="face4"></div>
+      <div class="face5"></div>
+      <div class="face6"></div>
+    </div>
+  </body>
+</html>

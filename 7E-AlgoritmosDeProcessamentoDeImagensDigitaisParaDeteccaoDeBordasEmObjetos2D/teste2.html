@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="game-canvas"
+      width="400"
+      height="400"
+      style="background-color: #000"
+    ></canvas>
+
+    <script>
+      // Get a reference to the canvas element
+      var canvas = document.getElementById('game-canvas');
+
+      // Get a reference to the 2D drawing context
+      var ctx = canvas.getContext('2d');
+
+      // Draw the maze on the canvas
+      drawMaze(ctx);
+
+      // Draw the dots on the canvas
+      drawDots(ctx);
+
+      // Draw the Pac-Man character on the canvas
+      drawPacMan(ctx);
+
+      // Listen for keyboard events to move the Pac-Man character
+      addEventListener('keydown', function (event) {
+        // Handle the keydown event to move the Pac-Man character
+      });
+
+      // Update the game state and redraw the canvas
+      function update() {
+        // Check for collisions between the Pac-Man character and the dots
+        checkCollisions();
+
+        // Redraw the canvas
+        drawMaze(ctx);
+        drawDots(ctx);
+        drawPacMan(ctx);
+      }
+
+      // Start the game loop
+      setInterval(update, 1000 / 60); // 60 frames per second
+    </script>
+  </body>
+</html>
